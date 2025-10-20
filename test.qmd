@@ -1,0 +1,39 @@
+---
+title: "Vectores en R"
+format:
+    revealjs:
+        theme: blood     
+---
+
+## Objetivo
+
+Aprender a crear y manipular vectores en R
+
+## Vocabulario
+
+-   **Vector :** Conjunto ordenado de valores del mismo tipo.​
+
+-   **Función** `c()`: Sirve para crear vectores combinando elementos.​
+
+-   **Índice:** Número que indica la posición de un valor dentro de un vector.​
+
+-   **Funciones estadísticas :** `mean()` (promedio), `max()` (máximo), `min()` (mínimo).
+
+## Code
+
+<p style="font-size: 40px;">
+Este párrafo tiene una letra más grande que el tamaño por defecto.
+</p>
+
+## Creación de vectores en R
+
+- `c()` significa combine
+- Asignación con `<-` ó  `=`
+
+
+Ejemplo 1: vector numérico
+```{r}
+#| echo: true
+notas = c(5, 3.4, 6.4, 7, 6.3)
+```
+
