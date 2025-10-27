@@ -6,10 +6,10 @@
 <script src="test_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="test_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="test_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="test_files/libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="test_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.31">
 
-  <title>Vectores en R</title>
+  <title>Condicionales en R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -55,46 +55,46 @@
         -khtml-user-select: none; -moz-user-select: none;
         -ms-user-select: none; user-select: none;
         padding: 0 4px; width: 4em;
+        color: #aaaaaa;
       }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
     div.sourceCode
-      { color: #f8f8f2;  }
+      { color: #003b4f; background-color: #f1f3f5; }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="test_files/libs/revealjs/dist/theme/quarto-421e21197ece528d4d1de15cb6028b12.css">
+  <link rel="stylesheet" href="test_files/libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
   <link href="test_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="test_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="test_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -187,12 +187,12 @@
     }
   </style>
 </head>
-<body class="quarto-dark">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Vectores en R</h1>
+  <h1 class="title">Condicionales en R</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -200,32 +200,108 @@
 </section>
 <section id="objetivo" class="slide level2">
 <h2>Objetivo</h2>
-<p>Aprender a crear y manipular vectores en R</p>
+<p>Introducir la lógica condicional en R</p>
 </section>
-<section id="vocabulario" class="slide level2">
-<h2>Vocabulario</h2>
-<ul>
-<li><p><strong>Vector :</strong> Conjunto ordenado de valores del mismo tipo.​</p></li>
-<li><p><strong>Función</strong> <code>c()</code>: Sirve para crear vectores combinando elementos.​</p></li>
-<li><p><strong>Índice:</strong> Número que indica la posición de un valor dentro de un vector.​</p></li>
-<li><p><strong>Funciones estadísticas :</strong> <code>mean()</code> (promedio), <code>max()</code> (máximo), <code>min()</code> (mínimo).</p></li>
-</ul>
+<section id="qué-es-un-condicional" class="slide level2">
+<h2>¿Qué es un condicional?</h2>
+<p>Un condicional permite que un programa tome decisiones según si una condición lógica es verdadera (TRUE) o falsa (FALSE).​ Esto se hace principalmente con las estructuras if, else if, y else.</p>
 </section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<p style="font-size: 40px;">
-Este párrafo tiene una letra más grande que el tamaño por defecto.
-</p>
-</section>
-<section id="creación-de-vectores-en-r" class="slide level2">
-<h2>Creación de vectores en R</h2>
-<ul>
-<li><code>c()</code> significa combine</li>
-<li>Asignación con <code>&lt;-</code> ó <code>=</code></li>
-</ul>
-<p>Ejemplo 1: vector numérico</p>
+<section id="estructura-básica-if" class="slide level2">
+<h2>1. Estructura básica: <strong>if</strong></h2>
+<p><br></p>
+<div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>notas <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="fl">3.4</span>, <span class="fl">6.4</span>, <span class="dv">7</span>, <span class="fl">6.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="cf">if</span>(condición){</span>
+<span id="cb1-2"><a href=""></a>    <span class="co"># Código que se ejecuta si la condición es TRUE</span></span>
+<span id="cb1-3"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>edad <span class="ot">=</span> <span class="dv">18</span></span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a><span class="cf">if</span> (edad <span class="sc">&gt;=</span> <span class="dv">18</span>) {</span>
+<span id="cb2-4"><a href=""></a>  <span class="fu">print</span>(<span class="st">"Eres mayor de edad"</span>)</span>
+<span id="cb2-5"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Eres mayor de edad"</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="estructura-con-else" class="slide level2">
+<h2>2. Estructura con else</h2>
+<p><strong>Sintaxis</strong></p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="cf">if</span> (condición) {</span>
+<span id="cb4-2"><a href=""></a>  <span class="co"># código si la condición es TRUE</span></span>
+<span id="cb4-3"><a href=""></a>} <span class="cf">else</span> {</span>
+<span id="cb4-4"><a href=""></a>  <span class="co"># código si la condición es FALSE</span></span>
+<span id="cb4-5"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<p><strong>Ejemplo</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>edad <span class="ot">&lt;-</span> <span class="dv">16</span></span>
+<span id="cb5-2"><a href=""></a></span>
+<span id="cb5-3"><a href=""></a><span class="cf">if</span> (edad <span class="sc">&gt;=</span> <span class="dv">18</span>) {</span>
+<span id="cb5-4"><a href=""></a>  <span class="fu">print</span>(<span class="st">"Eres mayor de edad"</span>)</span>
+<span id="cb5-5"><a href=""></a>} <span class="cf">else</span> {</span>
+<span id="cb5-6"><a href=""></a>  <span class="fu">print</span>(<span class="st">"Eres menor de edad"</span>)</span>
+<span id="cb5-7"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Eres menor de edad"</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="estructura-con-else-if-más-de-dos-condiciones" class="slide level2">
+<h2>3. Estructura con else if (más de dos condiciones)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="cf">if</span> (cond1) {</span>
+<span id="cb7-2"><a href=""></a>  <span class="co"># si cond1 es TRUE</span></span>
+<span id="cb7-3"><a href=""></a>} <span class="cf">else</span> <span class="cf">if</span> (cond2) {</span>
+<span id="cb7-4"><a href=""></a>  <span class="co"># si cond1 es FALSE pero cond2 es TRUE</span></span>
+<span id="cb7-5"><a href=""></a>} <span class="cf">else</span> {</span>
+<span id="cb7-6"><a href=""></a>  <span class="co"># si ninguna se cumple</span></span>
+<span id="cb7-7"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>nota <span class="ot">&lt;-</span> <span class="fl">5.8</span></span>
+<span id="cb8-2"><a href=""></a></span>
+<span id="cb8-3"><a href=""></a><span class="cf">if</span> (nota <span class="sc">&gt;=</span> <span class="fl">6.0</span>) {</span>
+<span id="cb8-4"><a href=""></a>  <span class="fu">print</span>(<span class="st">"Excelente"</span>)</span>
+<span id="cb8-5"><a href=""></a>} <span class="cf">else</span> <span class="cf">if</span> (nota <span class="sc">&gt;=</span> <span class="fl">4.0</span>) {</span>
+<span id="cb8-6"><a href=""></a>  <span class="fu">print</span>(<span class="st">"Aprobado"</span>)</span>
+<span id="cb8-7"><a href=""></a>} <span class="cf">else</span> {</span>
+<span id="cb8-8"><a href=""></a>  <span class="fu">print</span>(<span class="st">"Reprobado"</span>)</span>
+<span id="cb8-9"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Aprobado"</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="actividad" class="slide level2">
+<h2>Actividad</h2>
+<ul>
+<li><p>Descargar archivo condicionales.ipynb de github kenyer317.​</p></li>
+<li><p>Renombrar archivo condicionales-nombre-apellido.ipynb.​</p></li>
+<li><p>Editar en Jupyter​</p></li>
+<li><p>Guardar en OneDrive carpeta tecnología/análisis de datos en R.</p></li>
+</ul>
+<h3 id="ciclos">ciclos</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="cf">while</span> (condición) {</span>
+<span id="cb10-2"><a href=""></a>  <span class="co"># Código que se repetirá mientras &lt;br&gt; la condición sea TRUE</span></span>
+<span id="cb10-3"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 </section>

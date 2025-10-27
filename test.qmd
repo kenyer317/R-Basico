@@ -1,39 +1,155 @@
 ---
-title: "Vectores en R"
+title: "Condicionales en R"
 format:
     revealjs:
-        theme: blood     
+        theme:  white  
 ---
 
 ## Objetivo
 
-Aprender a crear y manipular vectores en R
-
-## Vocabulario
-
--   **Vector :** Conjunto ordenado de valores del mismo tipo.​
-
--   **Función** `c()`: Sirve para crear vectores combinando elementos.​
-
--   **Índice:** Número que indica la posición de un valor dentro de un vector.​
-
--   **Funciones estadísticas :** `mean()` (promedio), `max()` (máximo), `min()` (mínimo).
-
-## Code
-
-<p style="font-size: 40px;">
-Este párrafo tiene una letra más grande que el tamaño por defecto.
-</p>
-
-## Creación de vectores en R
-
-- `c()` significa combine
-- Asignación con `<-` ó  `=`
+Introducir la lógica condicional en R
 
 
-Ejemplo 1: vector numérico
+
+## ¿Qué es un condicional?
+
+
+
+Un condicional permite que un programa tome decisiones según si una condición lógica es verdadera (TRUE) o falsa (FALSE).​
+ Esto se hace principalmente con las estructuras if, else if, y else.
+
+
+
+
+## 1.  Estructura básica: **if**
+<br>
+
+. . .
+
 ```{r}
+#| eval: false
 #| echo: true
-notas = c(5, 3.4, 6.4, 7, 6.3)
+if(condición){
+    # Código que se ejecuta si la condición es TRUE
+}
 ```
 
+. . .
+
+
+<br>
+```{r}
+#| eval: true
+#| echo: true
+edad = 18
+
+if (edad >= 18) {
+  print("Eres mayor de edad")
+}
+
+```
+
+
+## 2. Estructura con else
+**Sintaxis**
+
+
+. . .
+
+```{r}
+#| eval: false
+#| echo: true
+
+if (condición) {
+  # código si la condición es TRUE
+} else {
+  # código si la condición es FALSE
+}
+
+```
+
+
+
+<br>
+
+**Ejemplo**
+
+
+```{r}
+#| eval: true
+#| echo: true
+edad <- 16
+
+if (edad >= 18) {
+  print("Eres mayor de edad")
+} else {
+  print("Eres menor de edad")
+}
+
+```
+
+
+
+## 3. Estructura con else if (más de dos condiciones)
+```{r}
+#| eval: false
+#| echo: true
+if (cond1) {
+  # si cond1 es TRUE
+} else if (cond2) {
+  # si cond1 es FALSE pero cond2 es TRUE
+} else {
+  # si ninguna se cumple
+}
+```
+. . .
+```{r}
+#| echo: true
+#| eval: false
+
+nota <- 5.8
+
+if (nota >= 6.0) {
+  print("Excelente")
+} else if (nota >= 4.0) {
+  print("Aprobado")
+} else {
+  print("Reprobado")
+}
+
+```
+ . . .
+```{r}
+#| echo: false
+#| eval: true
+
+nota <- 5.8
+if (nota >= 6.0) {
+  print("Excelente")
+} else if (nota >= 4.0) {
+  print("Aprobado")
+} else {
+  print("Reprobado")
+}
+```
+
+## Actividad
+- Descargar archivo condicionales.ipynb de github kenyer317.​
+
+- Renombrar archivo condicionales-nombre-apellido.ipynb.​
+
+- Editar en Jupyter​
+
+- Guardar en OneDrive carpeta tecnología/análisis de datos en R.
+
+
+### ciclos
+```{r}
+#| eval: false
+#| echo: true
+
+while (condición) {
+  # Código que se repetirá mientras  la condición sea TRUE
+}
+
+```
